@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca2f6883ff961e4089b9962937a8c4c, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  GameTime: 0
+  Balls: 0
+  Player:
+    PlayerPrefab: {fileID: 1264434558799508, guid: a45d17791cc6c4e40a8ce69f7e880e1b,
+      type: 2}
+    KickButton: 32
+    Rigidbody:
+      AngularDrag: 0
+      Drag: 0
+      GravityScale: 0
+      Mass: 1
+      PhysicsMaterialIndex: 0
+    Speed: 1
+    KickForce: 5
+  Ball:
+    BallPrefab: {fileID: 1488232661175468, guid: 659a9711998f9954a8281f4b71ced52a,
+      type: 2}
+    Rigidbody:
+      AngularDrag: 0.2
+      Drag: 1
+      GravityScale: 0
+      Mass: 2
+      PhysicsMaterialIndex: 1
+  PhysicsMaterials:
+  - {fileID: 6200000, guid: 2d05a523f98887e47a822347ff3c9aa4, type: 2}
+  - {fileID: 6200000, guid: cd727ec39702de54a8216becf0efac94, type: 2}
