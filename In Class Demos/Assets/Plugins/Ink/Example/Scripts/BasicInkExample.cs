@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using Ink.Runtime;
+﻿using Ink.Runtime;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class BasicInkExample : MonoBehaviour
@@ -48,14 +47,14 @@ public class BasicInkExample : MonoBehaviour
                 Choice choice = story.currentChoices[i];
                 Button button = CreateChoiceView(choice.text.Trim());
                 // Tell the button what to do when we press it
-                button.onClick.AddListener(delegate { OnClickChoiceButton(choice); });
+                button.onClick.AddListener(() => OnClickChoiceButton(choice) );
             }
         }
         // If we've read all the content and there's no choices, the story is finished!
         else
         {
             Button choice = CreateChoiceView("End of story.\nRestart?");
-            choice.onClick.AddListener(delegate { StartStory(); });
+            choice.onClick.AddListener(StartStory);
         }
     }
 
@@ -98,7 +97,7 @@ public class BasicInkExample : MonoBehaviour
         int childCount = canvas.transform.childCount;
         for (int i = childCount - 1; i >= 0; --i)
         {
-            GameObject.Destroy(canvas.transform.GetChild(i).gameObject);
+            Destroy(canvas.transform.GetChild(i).gameObject);
         }
     }
 
