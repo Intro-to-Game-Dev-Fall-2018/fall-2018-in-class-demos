@@ -6,10 +6,19 @@ using UnityEngine.UI;
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class BasicInkExample : MonoBehaviour
 {
+    [SerializeField] private TextAsset inkJSONAsset;
+    private Story story;
+
+    [SerializeField] private Canvas canvas;
+
+    // UI Prefabs
+    [SerializeField] private TextMeshProUGUI textPrefab;
+    [SerializeField] private Button buttonPrefab;
+    
     void Awake()
     {
         // Remove the default message
-        RemoveChildren();
+//        RemoveChildren();
         StartStory();
     }
 
@@ -101,12 +110,4 @@ public class BasicInkExample : MonoBehaviour
         }
     }
 
-    [SerializeField] private TextAsset inkJSONAsset;
-    private Story story;
-
-    [SerializeField] private Canvas canvas;
-
-    // UI Prefabs
-    [SerializeField] private TextMeshProUGUI textPrefab;
-    [SerializeField] private Button buttonPrefab;
 }
